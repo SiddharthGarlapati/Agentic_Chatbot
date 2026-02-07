@@ -11,10 +11,14 @@ def load_langgraph_agentic_app():
 
     if not user_input:
         st.error("Failed to load user input")
-
+    
     user_message = st.chat_input("Enter you query")
+    is_news_trigger = (
+        user_input.get("selected_usecase") == "AI news"
+        and user_input.get("IsFetchButtonClicked")
+    )
 
-    if user_message:
+    if user_message or is_news_trigger:
         try: 
             llm_obj_config = GroqLLM(user_controls_input= user_input)
             llm = llm_obj_config.get_llm_model()
@@ -24,6 +28,7 @@ def load_langgraph_agentic_app():
                 return
             
             usecase = user_input.get("selected_usecase")
+            
 
             if not usecase:
                 st.error("Error: No usecase selected")
@@ -31,7 +36,8 @@ def load_langgraph_agentic_app():
             try: 
                 graph_builder = GraphBuilder(model = llm)
                 graph = graph_builder.setup_graph(usecase)
-                display_obj = DisplayResult(usecase = usecase, graph = graph, user_message = user_message)
+                time_frame = user_input.get("selected_timeframe")
+                display_obj = DisplayResult(usecase = usecase, graph = graph, user_message = user_message,time_frame=time_frame)
                 display_obj.display_result_on_ui()
 
             except Exception as e:
