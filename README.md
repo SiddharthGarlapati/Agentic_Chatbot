@@ -1,3 +1,15 @@
+---
+license: apache-2.0
+title: Agentic_AI_Chatbot
+sdk: streamlit
+emoji: 🚀
+colorFrom: indigo
+colorTo: purple
+pinned: false
+short_description: This is an Agentic AI chatbot with Different Graphs
+---
+
+
 # 🤖 Agentic AI Chatbot
 
 An **Agentic AI Chatbot application** built using **LangGraph, LangChain, and Streamlit**, designed to demonstrate how **different AI use cases can be modeled as different execution graphs**.
