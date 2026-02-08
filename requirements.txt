@@ -1,0 +1,8 @@
+langgraph>=0.0.40
+langchain>=0.1.0
+langchain-core>=0.1.10
+langchain-community>=0.0.20
+langchain-groq>=0.0.5
+tavily-python>=0.3.0
+streamlit>=1.30.0
+typing-extensions>=4.8.0
