@@ -4,9 +4,8 @@ An **Agentic AI Chatbot application** built using **LangGraph, LangChain, and St
 
 Each use case constructs and runs its **own LangGraph**, enabling modular, scalable, and production-oriented agent workflows.
 
----
 
-## 🚀 Overview
+##  Overview
 
 This application showcases how **agentic AI systems** can be designed by composing:
 - LLM reasoning
@@ -17,9 +16,9 @@ This application showcases how **agentic AI systems** can be designed by composi
 
 Instead of a single monolithic chatbot, this app supports **multiple AI use cases**, each implemented as a **separate graph**.
 
----
 
-## 🧠 Core Idea
+
+##  Core Idea
 
 > **Different AI problems require different reasoning flows.**  
 > This project models each flow explicitly using **LangGraph**.
@@ -34,11 +33,11 @@ Each flow is:
 - Graph-driven
 - Easy to extend or debug
 
----
 
-## 🧩 Supported Use Cases
 
-### 1️⃣ Basic Chatbot
+##  Supported Use Cases
+
+### Basic Chatbot
 - Simple conversational AI
 - Direct interaction with an LLM
 - Single-step reasoning
@@ -48,9 +47,9 @@ Each flow is:
 - User → LLM → Response
 - Stateless execution
 
----
 
-### 2️⃣ Chatbot with Tools
+
+### Chatbot with Tools
 - Agentic chatbot capable of calling external tools
 - Dynamic tool selection
 - Conditional branching based on LLM decisions
@@ -61,9 +60,9 @@ Each flow is:
 - Tool → LLM feedback loop
 - Controlled termination
 
----
 
-### 3️⃣ AI News Explorer
+
+###  AI News Explorer
 - Task-specific agent for AI news summarization
 - Uses external search tools
 - Produces structured, summarized outputs
@@ -75,6 +74,6 @@ Each flow is:
 - Summarization node
 - Final response node
 
----
+
 
 
